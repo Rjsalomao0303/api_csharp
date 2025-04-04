@@ -1,0 +1,55 @@
+curl --location --request GET 'http://localhost:5000/api/clientes' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzQzNzIyOTczLCJleHAiOjE3NDM3MzAxNzMsImlhdCI6MTc0MzcyMjk3M30.su7Fx5dDUI2dqoh8oq_ChL_vClM3HxbVDLjDqiQM8Ms' \
+--data '{
+    "id": 3
+}'
+
+--------------------------------
+
+curl --location 'http://localhost:5000/api/clientes/1' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzQzNzIyOTczLCJleHAiOjE3NDM3MzAxNzMsImlhdCI6MTc0MzcyMjk3M30.su7Fx5dDUI2dqoh8oq_ChL_vClM3HxbVDLjDqiQM8Ms' \
+--data ''
+
+--------------------------------
+
+curl --location --request DELETE 'http://localhost:5000/api/clientes/3' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzQzNzIyOTczLCJleHAiOjE3NDM3MzAxNzMsImlhdCI6MTc0MzcyMjk3M30.su7Fx5dDUI2dqoh8oq_ChL_vClM3HxbVDLjDqiQM8Ms' \
+--data ''
+
+-------------------------------
+
+curl --location --request PUT 'http://localhost:5000/api/clientes/1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzQzNzIyOTczLCJleHAiOjE3NDM3MzAxNzMsImlhdCI6MTc0MzcyMjk3M30.su7Fx5dDUI2dqoh8oq_ChL_vClM3HxbVDLjDqiQM8Ms' \
+--data '{
+    "nome": "Empresa XYZ",
+    "cnpj": "12.345.678/0001-99",
+    "endereco": "Rua A, 123",
+    "telefone": "(11) 99999-9999"
+}'
+
+
+-----------------------------
+
+curl --location 'http://localhost:5000/api/clientes' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzQzNzIyOTczLCJleHAiOjE3NDM3MzAxNzMsImlhdCI6MTc0MzcyMjk3M30.su7Fx5dDUI2dqoh8oq_ChL_vClM3HxbVDLjDqiQM8Ms' \
+--data '{
+  "Nome": "Gabriel Salomão",
+  "CNPJ": "33333333333333",
+  "DataCadastro": "2025-04-03T13:01:00",
+  "Endereco": "Rua Exemplo, 170, Centro",
+  "Telefone": "5548999788074"
+}'
+
+
+---------------------------
+
+curl --location 'http://localhost:5000/api/auth/login' \
+--header 'Content-Type: application/json' \
+--data '{
+  "username": "admin",
+  "password": "123"
+}
+'
